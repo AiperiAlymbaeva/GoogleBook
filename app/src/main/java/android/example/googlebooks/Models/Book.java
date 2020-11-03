@@ -15,9 +15,9 @@ public class Book {
     @SerializedName("authors")
     @Expose
     private String mAuthor;
-    @SerializedName("thumbnail")
+    @SerializedName("smallThumbnail")
     @Expose
-    private ImageLinks mThumbnailUrl;
+    private String smallThumbnail;
     @SerializedName("averageRating")
     @Expose
     private String mRate;
@@ -35,11 +35,11 @@ public class Book {
     public ArrayList<Book> books = new ArrayList<>();
 
 
-    public Book(String Title, String Author, ImageLinks thumbnailUrl, String Rate, String Date, String Pages, String Link) {
+    public Book(String Title, String Author, String smallThumbnail, String Rate, String Date, String Pages, String Link) {
 
         mTitle = Title;
         mAuthor = Author;
-        mThumbnailUrl = thumbnailUrl;
+        this.smallThumbnail = smallThumbnail;
         mRate = Rate;
         mDate = Date;
         mPages = Pages;
@@ -86,12 +86,12 @@ public class Book {
         this.mPages = mPages;
     }
 
-    public ImageLinks getThumbnailUrl() {
-        return mThumbnailUrl;
+    public String getSmallThumbnail() {
+        return smallThumbnail;
     }
 
-    public void setThumbnailUrl(ImageLinks mThumbnailUrl) {
-        this.mThumbnailUrl = mThumbnailUrl;
+    public void setSmallThumbnail(String smallThumbnail) {
+        this.smallThumbnail = smallThumbnail;
     }
 
     public String getLink() {
@@ -118,57 +118,4 @@ public class Book {
     }
 
 
-//
-//    @SerializedName("title")
-//    private String title;
-//    @SerializedName("publishedDate")
-//    private String publishedDate;
-//    @SerializedName("smallThumbnail")
-//    private String smallThumbnail;
-//    @SerializedName("pageCount")
-//    private int pageCount;
-//    @SerializedName("averageRating")
-//    private double averageRating;
-//
-//    @SerializedName("volumeInfo")
-//    public VolumeInfo volumeInfo;
-//
-//    @SerializedName("infoLink")
-//
-//    public String infoLink;
-//
-//
-//    public Book(String title, String publishedDate, String smallThumbnail, int pageCount, double averageRating, String infoLink) {
-//        this.title = title;
-//        this.publishedDate = publishedDate;
-//        this.smallThumbnail = smallThumbnail;
-//        this.pageCount = pageCount;
-//        this.averageRating = averageRating;
-//
-//    }
-//
-//    public String getTitle() {
-//        return title;
-//    }
-//
-//
-//    public String getPublishedDate() {
-//        return publishedDate;
-//    }
-//
-//    public String getSmallThumbnail() {
-//        return smallThumbnail;
-//    }
-//
-//    public int getPageCount() {
-//        return pageCount;
-//    }
-//
-//    public double getAverageRating() {
-//        return averageRating;
-//    }
-//
-//    public String getInfoLink() {
-//        return infoLink;
-//    }
 }

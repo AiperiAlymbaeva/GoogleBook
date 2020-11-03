@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 
 import android.example.googlebooks.Models.Book;
 import android.example.googlebooks.R;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,7 +73,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
 
         Glide
                 .with(holder.image.getContext())
-                .load(book.volumeInfo.imageLinks.smallThumbnail)
+                .load(book.volumeInfo.imageLinks.smallThumbnail.replace("http", "https"))
                 .into(holder.image);
 
     }

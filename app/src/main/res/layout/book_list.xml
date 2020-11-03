@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="8dp"
+    android:layout_marginBottom="16dp">
+
+<RelativeLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    android:background="@android:color/white">
+
+
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/book_height"
+        android:layout_height="@dimen/book_width"
+
+
+        android:background="@android:color/darker_gray"
+       />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_text"
+        android:textSize="@dimen/title_text_size"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/image"
+        android:layout_marginTop="@dimen/book_top"
+        android:layout_marginLeft="@dimen/book_left"/>
+
+    <TextView
+        android:id="@+id/author"
+        style="@style/TextView"
+        android:layout_toRightOf="@+id/image"
+        android:layout_below="@+id/title"
+        android:text="@string/author"/>
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/TextView"
+        android:layout_toRightOf="@+id/image"
+        android:layout_below="@id/author"
+        android:text="@string/date"/>
+
+    <TextView
+        android:id="@+id/page"
+        style="@style/TextView"
+        android:layout_toRightOf="@id/image"
+        android:layout_below="@id/date"
+        android:text="@string/pages"/>
+
+
+    <RatingBar
+        android:id="@+id/book_rating"
+        style="?android:attr/ratingBarStyleIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/info"
+        android:layout_below="@+id/page"
+        android:numStars="1" />
+
+    <TextView
+        android:id="@+id/info"
+        style="@style/TextView"
+        android:layout_below="@+id/page"
+        android:layout_toRightOf="@+id/image"
+        android:text="N/A"
+        android:textColor="#000000"/>
+
+
+
+
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>
